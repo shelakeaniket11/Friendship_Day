@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>For You</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<div class="grain"></div>
+<div class="hearts-layer" id="heartsLayer"></div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div>
+
+<button class="sound-toggle" id="soundToggle" aria-label="Toggle sound">
+  <svg id="soundIconOn" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 6a9 9 0 0 1 0 12"/></svg>
+  <svg id="soundIconOff" viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M11 5 6 9H2v6h4l5 4V5Z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+</button>
+
+<audio id="bgMusic" loop preload="none">
+  <source src="assets/audio/song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ============ OPENING ============ -->
+<div id="opening">
+  <div class="opening-particles" id="openingParticles"></div>
+  <div class="type-line" id="typeLine"><span class="type-cursor"></span></div>
+  <button class="begin-btn" id="beginBtn">Begin →</button>
+</div>
+
+<!-- ============ HERO ============ -->
+<section id="hero">
+  <div class="ambient-orb a"></div>
+  <div class="ambient-orb b"></div>
+  <div class="section-inner">
+    <h1 class="hero-heading reveal">Happy Friendship Day <em>Dear Tanuuuu </em> ❤️</h1>
+    <p class="hero-sub reveal">
+      Some friendships are chosen.
+      <span class="strong-line">Some are blessings. You're both.</span>
+    </p>
+    <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+  </div>
+</section>
+
+<!-- ============ OUR STORY ============ -->
+<section id="story">
+  <div class="section-inner">
+    <span class="eyebrow">Our Story</span>
+    <h2 class="reveal">How you found your way in</h2>
+    <div class="story-text">
+      <p class="reveal">I truly believe you were sent into my life exactly when I needed someone like you the most.</p>
+      <p class="reveal soft">I didn't know I was looking for someone. But life somehow knew.</p>
+      <p class="reveal">You entered quietly. Without trying. Without forcing anything. Everything just felt natural.</p>
+      <p class="reveal soft">Maybe it happened because our thoughts matched. Our emotions matched. Our understanding matched. Our vibes matched.</p>
+      <p class="reveal emph">Sometimes it feels like we were simply meant to meet.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADMIRE ============ -->
+<section id="admire">
+  <div class="section-inner">
+    <span class="eyebrow">What I See In You</span>
+    <h2>Things I admire about you</h2>
+    <p class="lede" style="margin-bottom:28px;">Not a list. Just everything I've noticed — scratch each card to reveal it ✦</p>
+    <div class="card-grid">
+      <div class="glass-card reveal" data-scratch>
+        <canvas class="scratch-canvas"></canvas>
+        <div class="scratch-hint"><span class="heart-hint">💛</span>Scratch me</div>
+        <span class="icon">❤️</span><h3>Your Kindness</h3><p>You have one of the purest hearts I've ever known.</p>
+      </div>
+      <div class="glass-card reveal" data-scratch>
+        <canvas class="scratch-canvas"></canvas>
+        <div class="scratch-hint"><span class="heart-hint">💛</span>Scratch me</div>
+        <span class="icon">😊</span><h3>Your Smile</h3><p>No matter what happens, you somehow keep smiling — and it makes everything around you feel lighter.</p>
+      </div>
+      <div class="glass-card reveal" data-scratch>
+        <canvas class="scratch-canvas"></canvas>
+        <div class="scratch-hint"><span class="heart-hint">💛</span>Scratch me</div>
+        <span class="icon">😂</span><h3>Your Funny Side</h3><p>Some of my happiest memories exist only because of our random conversations.</p>
+      </div>
+      <div class="glass-card reveal" data-scratch>
+        <canvas class="scratch-canvas"></canvas>
+        <div class="scratch-hint"><span class="heart-hint">💛</span>Scratch me</div>
+        <span class="icon">🤍</span><h3>The Way You Care</h3><p>You care about people so naturally, without ever expecting anything back.</p>
+      </div>
+      <div class="glass-card reveal" data-scratch>
+        <canvas class="scratch-canvas"></canvas>
+        <div class="scratch-hint"><span class="heart-hint">💛</span>Scratch me</div>
+        <span class="icon">🌸</span><h3>Your Emotional Heart</h3><p>You feel everything deeply. It's one of the reasons you're so beautiful as a person.</p>
+      </div>
+      <div class="glass-card reveal" data-scratch>
+        <canvas class="scratch-canvas"></canvas>
+        <div class="scratch-hint"><span class="heart-hint">💛</span>Scratch me</div>
+        <span class="icon">✨</span><h3>Your Curiosity</h3><p>You're always excited to learn, explore, and understand new things.</p>
+      </div>
+      <div class="glass-card reveal" data-scratch>
+        <canvas class="scratch-canvas"></canvas>
+        <div class="scratch-hint"><span class="heart-hint">💛</span>Scratch me</div>
+        <span class="icon">🫂</span><h3>My Calm</h3><p>Whenever I start overthinking, whenever I panic, whenever my mind invents problems that don't exist — you're always the one who quietly brings me back.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline">
+  <div class="section-inner">
+    <span class="eyebrow">Our Friendship</span>
+    <h2>Not dates. Just moments.</h2>
+    <div class="tl" style="margin-top:60px;">
+      <div class="tl-item reveal"><span class="tl-dot"></span><p>The first conversations</p></div>
+      <div class="tl-item reveal"><span class="tl-dot"></span><p>Slowly becoming comfortable</p></div>
+      <div class="tl-item reveal"><span class="tl-dot"></span><p>Sharing random thoughts</p></div>
+      <div class="tl-item reveal"><span class="tl-dot"></span><p>Laughing for no reason</p></div>
+      <div class="tl-item reveal"><span class="tl-dot"></span><p>Trust growing naturally</p></div>
+      <div class="tl-item reveal"><span class="tl-dot"></span><p>Being there during the hard moments</p></div>
+      <div class="tl-item reveal"><span class="tl-dot"></span><p>Becoming each other's safe space</p></div>
+    </div>
+    <div class="tl-closing reveal">
+      Maybe friendships aren't created.
+      <span class="line2">Maybe they're simply found.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STARS ============ -->
+<section id="stars-section">
+  <div class="section-inner">
+    <span class="eyebrow">Tap Every Star</span>
+    <h2>A small message, hidden in the sky</h2>
+    <p class="lede">Open all four to see it.</p>
+    <div class="star-field" id="starField"></div>
+    <div class="stars-finale" id="starsFinale">
+      <p class="big">Thank you...</p>
+      <p>For always calming my overthinking.<br>For handling my panic.<br>For listening without judging.<br>For staying.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LETTER ============ -->
+<section id="letter">
+  <div class="section-inner">
+    <div class="letter-card reveal">
+      <div class="letter-title">To You ❤️</div>
+      <div class="letter-body">
+        <p>Sometimes I wonder why life brought us together.</p>
+        <p class="gap">Then I stop wondering — because maybe it already knew what I needed before I did.</p>
+        <p>You walked into my life so naturally that I never even noticed the moment everything started changing.</p>
+        <p>You became someone I could laugh with. Someone I could trust. Someone I could be completely myself around.</p>
+        <p>Whenever I start overthinking, whenever my thoughts get louder than reality, you somehow know exactly how to bring me back.</p>
+        <p>You never make me feel silly. You never make me feel like I'm too much. You simply stay.</p>
+        <p class="gap">And sometimes, that's all a person really needs.</p>
+        <p>Thank you for every conversation. Every laugh. Every smile. Every moment. Every time you cared.</p>
+        <p>I honestly don't know what I did to deserve a friend like you.</p>
+        <p class="gap">But I'm grateful, every single day, that life brought you into mine.</p>
+        <p>Happy Friendship Day ❤️</p>
+      </div>
+      <div class="letter-sign">— always</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LUCKY ============ -->
+<section id="lucky">
+  <div class="section-inner">
+    <span class="eyebrow">Reasons I'm Lucky</span>
+    <h2>Some things can't be counted</h2>
+    <div class="lucky-grid">
+      <div class="lucky-item reveal"><div class="num">∞</div><div class="label">Laughs Shared</div></div>
+      <div class="lucky-item reveal"><div class="num" data-text="Countless">0</div><div class="label">Conversations</div></div>
+      <div class="lucky-item reveal"><div class="num" data-text="Unlimited">0</div><div class="label">Support</div></div>
+      <div class="lucky-item reveal"><div class="num" data-text="One">0</div><div class="label">Incredible Friend</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section id="final">
+  <div class="final-stars" id="finalStars"></div>
+  <div class="section-inner">
+    <h2 class="final-heading reveal">Some people become memories.<br>Some become family.<br>You became <span class="home">home</span>.</h2>
+    <p class="final-sub reveal">Happy Friendship Day ❤️ <br> You are the bestiestttttt person I ever Had met<br>I hope you always know how much you mean to me. <br> Misssss  Youuuuuuu  Sooooooo  Muchhhhhhh  Dukraaaaaa</p>
+    <button class="relive-btn" id="reliveBtn">Relive Our Journey</button>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.browser.min.js"></script>
+
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
